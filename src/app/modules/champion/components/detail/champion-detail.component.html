@@ -1,2 +1,18 @@
-<div *ngIf="champData.id">{{champData.id}}</div>
-<div *ngIf="!champData.id">THAT'S NOT A CHAMP</div>
+<div class="champion-detail">
+    <div *ngIf="champData.id" class="container">
+        <span>{{champData.id}}</span> <br />
+        <div class="page-layout">
+            <div class="champ-controls">
+                <img [src]="loadingURL"/> <br />
+                <div class="spell-buttons" *ngFor="let spell of champData.spells; index as i">
+                    <img (click)="setSelectedSpell(spell,i)" width="77" [src]="spellURL+spell.image.full"/> 
+                </div>
+            </div>
+            <div *ngIf="selectedSpell" class="spell-info">
+                <span style="font-weight:bold">{{ selectedSpell.abilityKey + " - " + selectedSpell.name}}</span> <br />
+                <span>{{selectedSpell.description}}</span>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!champData.id">THAT'S NOT A CHAMP</div>
+</div>

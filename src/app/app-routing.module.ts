@@ -4,6 +4,10 @@ import { ChampionDetailComponent } from './modules/champion/components/detail/ch
 import { ChampionListComponent } from './modules/champion/components/list/champion-list.component';
 
 const routes: Routes = [
+  { path: '',
+    redirectTo: '/champion/list',
+    pathMatch: 'full'
+  },
   { path: 'champion/detail/:id', component: ChampionDetailComponent },
   { path: 'champion/list', component: ChampionListComponent }
 ];
