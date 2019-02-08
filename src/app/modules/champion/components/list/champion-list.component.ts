@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http'; 
+declare var require: any; 
 var json = require('../../../../../assets/json/championFull.json');
 
 @Component({
-  selector: 'main-content',
-  templateUrl: './main-content.component.html',
-  styleUrls: ['./main-content.component.sass']
+  selector: 'champion-list',
+  templateUrl: './champion-list.component.html',
+  styleUrls: ['./champion-list.component.sass']
 })
-export class MainContentComponent implements OnInit {
+export class ChampionListComponent implements OnInit {
   public champList = [];
-  public spellURL = 'http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/';
+  public spellURL = 'http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/';
 
   private shuffle(a) {
     var j, x, i;
