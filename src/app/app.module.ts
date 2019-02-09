@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SiteContentModule } from './modules/site-content/site-content.module';
 import { ChampionModule } from './modules/champion/champion.module';
+import { QuizModule } from './modules/quiz/quiz.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ChampionModule } from './modules/champion/champion.module';
     BrowserModule,
     AppRoutingModule,  
     SiteContentModule,
-    ChampionModule
+    ChampionModule,
+    QuizModule
   ],
   providers: [],
   bootstrap: [AppComponent]

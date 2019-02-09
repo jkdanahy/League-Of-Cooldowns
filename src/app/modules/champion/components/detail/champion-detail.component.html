@@ -10,6 +10,7 @@
             </div>
             <div *ngIf="selectedSpell" class="spell-info">
                 <span style="font-weight:bold">{{ selectedSpell.abilityKey + " - " + selectedSpell.name}}</span> <br />
+                <span><b>Default Cooldowns:</b> {{selectedSpell.cooldownBurn}}</span> <br />
                 <span>{{selectedSpell.description}}</span>
             </div>
         </div>
