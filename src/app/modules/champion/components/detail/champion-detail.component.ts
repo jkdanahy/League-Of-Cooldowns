@@ -13,19 +13,20 @@ export class ChampionDetailComponent implements OnInit {
   public selectedSpell;
   public loadingURL ='';
   public spellURL = 'http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/';
+  private champId;
 
   constructor(private route:ActivatedRoute, private router:Router) {
-    let champs = json.data;
-    let champId = (route.snapshot.params['id']);
-    this.loadingURL ='http://ddragon.leagueoflegends.com/cdn/img/champion/loading/' + champId + '_0.jpg';
-    console.log(champs);
-    if(champs[champId])
-    {
-        this.champData = champs[champId];
-    }
+    this.champId = (route.snapshot.params['id']);
   }
 
   ngOnInit() {
+    let champs = json.data;
+    this.loadingURL ='http://ddragon.leagueoflegends.com/cdn/img/champion/loading/' + this.champId + '_0.jpg';
+    console.log(champs);
+    if(champs[this.champId])
+    {
+        this.champData = champs[this.champId];
+    }
   }
 
   public setSelectedSpell(spell, i) {
