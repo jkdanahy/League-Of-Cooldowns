@@ -1,6 +1,6 @@
 <div class="main-content">
   <div *ngFor="let champ of champList">
-    <b>{{champ.title}}</b><br />
+    <b>{{champ.name}}</b><br />
     <a href="/champion/detail/{{champ.id}}">
       <img width="64" height="64" src="{{spellURL+champ.id+'.png'}}"/>
     </a>
