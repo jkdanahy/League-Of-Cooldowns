@@ -12,7 +12,7 @@ export class ChampionDetailComponent implements OnInit {
   public champData = {};
   public selectedSpell;
   public loadingURL ='';
-  public spellURL = 'http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/';
+  public spellURL = 'http://ddragon.leagueoflegends.com/cdn/9.3.1/img/spell/';
   private champId;
 
   constructor(private route:ActivatedRoute, private router:Router) {

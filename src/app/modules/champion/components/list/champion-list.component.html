@@ -1,8 +1,11 @@
-<div class="main-content">
-  <div *ngFor="let champ of champList">
-    <b>{{champ.name}}</b><br />
-    <a href="/champion/detail/{{champ.id}}">
-      <img width="64" height="64" src="{{spellURL+champ.id+'.png'}}"/>
-    </a>
+<div class="main-content container">
+  <div><h1>Champions</h1></div>
+  <div class="champ-content">
+    <div *ngFor="let champ of champList">
+      <b>{{champ.name}}</b><br />
+      <a href="/champion/detail/{{champ.id}}">
+        <img width="64" height="64" src="{{spellURL+champ.id+'.png'}}"/>
+      </a>
+    </div>
   </div>
 </div>

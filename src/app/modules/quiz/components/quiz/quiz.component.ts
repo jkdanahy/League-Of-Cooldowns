@@ -17,7 +17,7 @@ export class QuizComponent implements OnInit {
   public currentQuestion = 0;
   public currentAnswer;
   public numCorrect = 0;
-  public spellURL = 'http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/';
+  public spellURL = 'http://ddragon.leagueoflegends.com/cdn/9.3.1/img/spell/';
   public champsAvailable = [];
   public champIndexesAvailable = [];
   public levelsAvailable = [

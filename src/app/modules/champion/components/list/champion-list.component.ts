@@ -9,7 +9,7 @@ var json = require('../../../../../assets/json/championFull.json');
 })
 export class ChampionListComponent implements OnInit {
   public champList = [];
-  public spellURL = 'http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/';
+  public spellURL = 'http://ddragon.leagueoflegends.com/cdn/9.3.1/img/champion/';
 
   private shuffle(a) {
     var j, x, i;
