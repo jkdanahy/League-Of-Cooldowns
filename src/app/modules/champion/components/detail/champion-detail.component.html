@@ -8,6 +8,9 @@
                     <img (click)="setSelectedSpell(spell,i)" width="77" [src]="spellURL+spell.image.full"/> 
                 </div>
             </div>
+            <div *ngIf="!selectedSpell" class="default-info">
+                <span>Click any skill for description and cooldowns.</span>
+            </div>
             <div *ngIf="selectedSpell" class="spell-info">
                 <span style="font-weight:bold">{{ selectedSpell.abilityKey + " - " + selectedSpell.name}}</span> <br />
                 <span><b>Default Cooldowns:</b> {{selectedSpell.cooldownBurn}}</span> <br />

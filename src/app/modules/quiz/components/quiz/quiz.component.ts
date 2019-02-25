@@ -12,11 +12,13 @@ export class QuizComponent implements OnInit {
   public quizInProgress = false;
   public quizOver = false;
   public showCorrect = false;
+  public isClose = false;
   public quizQuestions = [];
   public numQuestions = 10;
   public currentQuestion = 0;
   public currentAnswer;
   public numCorrect = 0;
+  public numClose = 0;
   public spellURL = 'http://ddragon.leagueoflegends.com/cdn/9.3.1/img/spell/';
   public champsAvailable = [];
   public champIndexesAvailable = [];
@@ -107,11 +109,15 @@ export class QuizComponent implements OnInit {
   public submitAnswer() {
     if(this.currentAnswer == this.quizQuestions[this.currentQuestion].answer) {
       this.numCorrect++;
+    } else if(this.currentAnswer >= Math.floor(this.quizQuestions[this.currentQuestion].answer*.9) && this.currentAnswer <= Math.ceil(this.quizQuestions[this.currentQuestion].answer*1.1)) {
+      this.numClose++;
+      this.isClose = true;
     }
     this.showCorrect = true;
   }
 
   public nextQuestion() {
+    this.isClose = false;
     if(this.currentQuestion != this.numQuestions -1)
     {
       this.currentQuestion++;

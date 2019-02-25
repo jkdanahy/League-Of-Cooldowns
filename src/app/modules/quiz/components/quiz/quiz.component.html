@@ -40,11 +40,6 @@
     <button class="btn btn-primary" (click)="defineQuestions()">Start Quiz</button>
   </div>
 
-  <div *ngIf="!quizInProgress && quizOver">
-    <p>Results:</p><br />
-    <span>You got {{numCorrect}} out of {{numQuestions}} questions correct!</span>
-  </div>
-
   <div *ngIf="quizInProgress"> 
     <div>{{quizQuestions[currentQuestion].question}}</div> <br />
     <div>
@@ -55,8 +50,16 @@
       <button class="btn btn-primary" (click)="submitAnswer()">Submit</button>
     </div>
     <div *ngIf="showCorrect">
-      <span>{{currentAnswer == quizQuestions[currentQuestion].answer ? "Correct!" : "Incorrect!"}} The cooldown for this skill is {{quizQuestions[currentQuestion].answer}} seconds.</span>
+      <span *ngIf="isClose">Close! The cooldown for this skill is {{quizQuestions[currentQuestion].answer}} seconds.</span>
+      <span *ngIf="!isClose">{{currentAnswer == quizQuestions[currentQuestion].answer ? "Correct!" : "Incorrect!"}} The cooldown for this skill is {{quizQuestions[currentQuestion].answer}} seconds.</span>
       <button class="btn btn-primary" (click)="nextQuestion()">Next Question</button>
     </div>
   </div>
+
+  <div *ngIf="!quizInProgress && quizOver">
+      <span>Results:</span><br />
+      <span>You got {{numCorrect}} out of {{numQuestions}} questions correct</span>
+      <span *ngIf="numClose > 0">, but you were very close on {{numClose}} questions</span>
+      <span>!</span>
+    </div>
 </div>
