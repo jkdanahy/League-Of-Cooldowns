@@ -57,9 +57,12 @@
   </div>
 
   <div *ngIf="!quizInProgress && quizOver">
-      <span>Results:</span><br />
-      <span>You got {{numCorrect}} out of {{numQuestions}} questions correct</span>
-      <span *ngIf="numClose > 0">, but you were very close on {{numClose}} questions</span>
-      <span>!</span>
-    </div>
+    <span>Results:</span><br />
+    <span>You got {{numCorrect}} out of {{numQuestions}} questions correct</span>
+    <span *ngIf="numClose > 0">, but you were very close on {{numClose}} questions</span>
+    <span>!</span>
+    <br />
+    <br />
+    <button class="btn btn-primary" (click)="resetQuiz()">Retake?</button>
+  </div>
 </div>

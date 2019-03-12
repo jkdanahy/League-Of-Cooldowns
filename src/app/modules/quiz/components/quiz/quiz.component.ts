@@ -155,4 +155,13 @@ export class QuizComponent implements OnInit {
     }
     this.showCorrect = false;
   }
+
+  public resetQuiz() {
+    this.quizQuestions = [];
+    this.questionPool = [];
+    this.currentQuestion = 0;
+    this.numCorrect = 0;
+    this.numClose = 0;
+    this.quizOver=false;
+  }
 }
