@@ -11,17 +11,6 @@ export class ChampionListComponent implements OnInit {
   public champList = [];
   public spellURL = 'http://ddragon.leagueoflegends.com/cdn/9.3.1/img/champion/';
 
-  private shuffle(a) {
-    var j, x, i;
-    for (i = a.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        x = a[i];
-        a[i] = a[j];
-        a[j] = x;
-    }
-    return a;
-  }
-
   constructor() {
     let champData = json.data;
     for (var key in champData) {
@@ -29,7 +18,7 @@ export class ChampionListComponent implements OnInit {
           this.champList.push(champData[key]);
       }
     }
-    console.log(champData);
+    this.champList.sort((a, b) => (a.name > b.name) ? 1 : -1)
    }
 
   ngOnInit() {

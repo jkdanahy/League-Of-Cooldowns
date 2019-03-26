@@ -2,7 +2,7 @@
   <div *ngIf="!quizInProgress && !quizOver">
     <h1>League of Cooldowns Quiz</h1>
     <div><h3>Quiz Settings:</h3></div>
-    <div>
+    <div class="quiz-settings">
       <span>Skill levels:</span> <br />
 
       <label *ngFor="let level of levelsAvailable" class="quiz-option">
@@ -36,8 +36,8 @@
         </div>
       </div>
       <br />
+      <button class="btn btn-primary" (click)="defineQuestions()">Start Quiz</button>
     </div>
-    <button class="btn btn-primary" (click)="defineQuestions()">Start Quiz</button>
   </div>
 
   <div *ngIf="quizInProgress"> 
