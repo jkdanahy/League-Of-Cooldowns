@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SiteFooterComponent } from './components/site-footer/site-footer.component';
 import { SiteHeaderComponent } from './components/site-header/site-header.component';
+import { DonateComponent } from './components/donate/donate.component';
 @NgModule({
   declarations: [
     SiteFooterComponent,
-    SiteHeaderComponent
+    SiteHeaderComponent,
+    DonateComponent
   ],
   imports: [
     CommonModule
