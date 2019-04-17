@@ -9,22 +9,23 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Static Data/Images
 
-The images used for League of Cooldowns are stored locally. In order to use this application you will need to populate your folders src/assets/images and src/assets/json respectively.
+The images used for League of Cooldowns are stored locally. In order to use this application you will need to populate your folders src/assets/images and src/assets/json respectively.  
 
-You can download the latest static data from riot at this link: https://ddragon.leagueoflegends.com/cdn/dragontail-6.24.1.tgz (Modify the URL for the current patch).
+You can download the latest static data from riot at this link: https://ddragon.leagueoflegends.com/cdn/dragontail-6.24.1.tgz (Modify the URL for the current patch).  
 
-Unzip the tgz file and copy the contents of ./6.24.1/data/en_US/ to your local src/assets/json
-Also copy the  "img" directory from the root of tgz to src/assets/images
+Unzip the tgz file and copy the contents of ./6.24.1/data/en_US/ to your local src/assets/json  
+Also copy the  "img" directory from the root of tgz to src/assets/images  
 
-If done properly, your assets folder should look like this:
-images
-  img
-  backgrounds-blank-blue.jpg
-json
-  champion
-  champion.json
-  championFull.json
-  ...
+If done properly, your assets folder should look like this:  
+  
+images  
+  img  
+  backgrounds-blank-blue.jpg  
+json  
+  champion  
+  champion.json  
+  championFull.json  
+  ...  
 
 ## Code scaffolding
 
