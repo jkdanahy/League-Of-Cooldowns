@@ -17,15 +17,17 @@ Unzip the tgz file and copy the contents of ./6.24.1/data/en_US/ to your local s
 Also copy the  "img" directory from the root of tgz to src/assets/images  
 
 If done properly, your assets folder should look like this:  
-  
-images  
-  img  
-  backgrounds-blank-blue.jpg  
-json  
-  champion  
-  champion.json  
-  championFull.json  
-  ...  
+<ul>
+  <li>images</li>  
+  <li>img
+    <ul><li>backgrounds-blank-blue.jpg</li></ul>  
+  </li>
+  <li>json</li>
+  <ul>
+    <li>champion</li>  
+    <li>champion.json  </li>
+    <li>championFull.json</li>  
+    <li>...</li>  
 
 ## Code scaffolding
 
