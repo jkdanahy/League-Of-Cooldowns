@@ -1,6 +1,7 @@
 # LeagueOfCooldowns
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
+It can also be viewed remotely from http://www.leagueofcooldowns.com
 
 ## Development server
 
